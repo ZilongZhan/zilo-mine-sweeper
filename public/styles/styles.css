@@ -21,7 +21,7 @@ body {
   width: auto;
 }
 
-.main-heading {
+.page-title {
   text-shadow: 3px 3px 1px rgb(255, 114, 114);
   font-size: 1.5rem;
 }
