@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", system-ui;
+  margin: 0;
+}
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(94, 92, 202);
+  padding: 10px;
+}
+
+.page-logo {
+  height: 40px;
+  width: auto;
+}
+
+.page-title {
+  text-shadow: 3px 3px 1px rgb(255, 114, 114);
+  font-size: 1.5rem;
+}
