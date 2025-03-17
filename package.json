@@ -1,0 +1,17 @@
+{
+  "name": "zilo-mine-sweeper",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "public/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "typescript": "^5.8.2"
+  }
+}
