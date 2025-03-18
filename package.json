@@ -10,7 +10,9 @@
     "build": "tsc",
     "build:dev": "tsc --watch",
     "prepare": "husky",
-    "start": "serve public"
+    "start": "serve public",
+    "test": "jest",
+    "test:dev": "jest --watchAll"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
