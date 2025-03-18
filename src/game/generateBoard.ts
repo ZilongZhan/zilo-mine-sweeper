@@ -1,7 +1,12 @@
-import { Board } from "../data/types.js";
-import { Cell } from "../data/types.js";
+import { Board, Cell } from "../data/types.js";
 
 export const generateBoard = (dimensions: number): Board => {
+  const areInvalidDimensions = dimensions < 5;
+
+  if (areInvalidDimensions) {
+    throw new Error("Dimensions cannot be smaller than 5");
+  }
+
   let newBoard: Board = [];
 
   for (let row = 0; row < dimensions; row++) {
