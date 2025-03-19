@@ -9,16 +9,16 @@ export const generateBoard = (dimensions: number): Board => {
 
   const board: Board = [];
 
-  for (let row = 0; row < dimensions; row++) {
+  for (let rowNumber = 0; rowNumber < dimensions; rowNumber++) {
     board.push([]);
 
-    for (let column = 0; column < dimensions; column++) {
+    for (let columnNumber = 0; columnNumber < dimensions; columnNumber++) {
       const cell: Cell = {
         hasMine: false,
         adjacentMinesTotal: 0,
       };
 
-      board[row][column] = cell;
+      board[rowNumber][columnNumber] = cell;
     }
   }
 
