@@ -40,7 +40,6 @@ body {
 
 .row {
   list-style: none;
-  width: fit-content;
   display: flex;
   padding: 0;
   margin: 0;
