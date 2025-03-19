@@ -25,3 +25,45 @@ body {
   text-shadow: 3px 3px 1px rgb(255, 114, 114);
   font-size: 1.5rem;
 }
+
+.main-content {
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.board {
+  min-width: 320px;
+  align-self: center;
+}
+
+.row {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.cell {
+  border: 1px solid black;
+  background-color: rgb(220, 220, 220);
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: flex;
+  font-family: "Press Start 2P", system-ui;
+
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: rgb(122, 122, 122);
+  }
+}
+
+.hidden {
+  display: none !important;
+}

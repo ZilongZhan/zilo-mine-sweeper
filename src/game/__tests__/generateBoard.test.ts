@@ -53,6 +53,7 @@ describe("Given the generateBoard function", () => {
       const dimensions = 0;
 
       const expectedErrorMessage = "Dimensions cannot be smaller than 5";
+
       expect(() => generateBoard(dimensions)).toThrow(expectedErrorMessage);
     });
   });
