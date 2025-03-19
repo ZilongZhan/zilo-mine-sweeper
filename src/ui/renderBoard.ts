@@ -16,6 +16,7 @@ export const renderBoard = (board: Board): void => {
       const cellWrapper = document.createElement("li");
       const newCell = document.createElement("button");
       newCell.classList.add("cell");
+      newCell.ariaLabel = "Sweep cell";
 
       cellWrapper.appendChild(newCell);
 
