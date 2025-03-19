@@ -1,5 +1,5 @@
-export const setMine = (chanceOfMine = 15.625): boolean => {
-  const hasMine = Math.round(Math.random() * 100) < chanceOfMine;
+import { Cell } from "../data/types";
 
-  return hasMine;
+export const setMine = (cell: Cell, chanceOfMine = 15.625): void => {
+  cell.hasMine = Math.random() * 100 < chanceOfMine;
 };

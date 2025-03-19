@@ -3,6 +3,6 @@ import { setMine } from "./setMine.js";
 
 export const setBoardMines = (board: Board): void => {
   board.forEach((row) => {
-    row.forEach((cell) => (cell.hasMine = setMine()));
+    row.forEach((cell) => setMine(cell));
   });
 };
