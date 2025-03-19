@@ -48,12 +48,21 @@ body {
 
 .cell {
   border: 1px solid black;
-  background-color: transparent;
+  background-color: rgb(220, 220, 220);
   width: 2rem;
   height: 2rem;
   padding: 0;
   display: flex;
   font-family: "Press Start 2P", system-ui;
+
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: rgb(122, 122, 122);
+  }
 }
 
 .hidden {
