@@ -1,11 +1,9 @@
 import { Cell } from "../data/types.js";
 import { renderMine } from "./renderMine.js";
 
-export const renderCell = (cell: Cell, newCell: HTMLLIElement): void => {
-  const cellSquare = newCell.querySelector(".cell") as HTMLButtonElement;
-
+export const renderCell = (cell: Cell, newCell: HTMLButtonElement): void => {
   if (cell.hasMine) {
-    renderMine(cell, cellSquare);
+    renderMine(newCell);
 
     return;
   }

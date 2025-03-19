@@ -3,23 +3,24 @@ import { renderCell } from "./renderCell.js";
 
 export const renderBoard = (board: Board): void => {
   const gameBoard = document.querySelector(".board");
-  const boardRow = document.querySelector(".row");
-  const dummyCell = document.querySelector(".row li");
 
-  if (!gameBoard || !boardRow || !dummyCell) {
-    throw new Error("Missing required elements.");
+  if (!gameBoard) {
+    throw new Error("Missing board element.");
   }
 
-  gameBoard.innerHTML = "";
-  boardRow.innerHTML = "";
-
   board.forEach((row) => {
-    const newRow = boardRow.cloneNode(true);
+    const newRow = document.createElement("ul");
+    newRow.classList.add("row");
 
     row.forEach((cell) => {
-      const newCell = dummyCell.cloneNode(true) as HTMLLIElement;
+      const cellWrapper = document.createElement("li");
+      const newCell = document.createElement("button");
+      newCell.classList.add("cell");
+
+      cellWrapper.appendChild(newCell);
+
       renderCell(cell, newCell);
-      newRow.appendChild(newCell);
+      newRow.appendChild(cellWrapper);
     });
 
     gameBoard.appendChild(newRow);
