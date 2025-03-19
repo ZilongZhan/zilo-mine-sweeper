@@ -7,20 +7,20 @@ export const generateBoard = (dimensions: number): Board => {
     throw new Error("Dimensions cannot be smaller than 5");
   }
 
-  let newBoard: Board = [];
+  const board: Board = [];
 
   for (let row = 0; row < dimensions; row++) {
-    newBoard.push([]);
+    board.push([]);
 
     for (let column = 0; column < dimensions; column++) {
-      const newCell: Cell = {
+      const cell: Cell = {
         hasMine: false,
         adjacentMinesTotal: 0,
       };
 
-      newBoard[row][column] = newCell;
+      board[row][column] = cell;
     }
   }
 
-  return newBoard;
+  return board;
 };
