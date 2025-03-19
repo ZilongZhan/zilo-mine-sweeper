@@ -4,7 +4,7 @@ describe("Given the generateBoard function", () => {
   describe("When it receives 5", () => {
     const dimensions = 5;
 
-    test("Then it should return an board of rows length 5.", () => {
+    test("Then it should return an board of rows with length 5.", () => {
       const expectedLength = 5;
 
       const arrayLength = generateBoard(dimensions).length;
