@@ -5,8 +5,8 @@ import {
 } from "./game/index.js";
 import { renderBoard } from "./ui/index.js";
 
-const gameBoard = generateBoard(10);
-const boardWithMines = setHasMines(gameBoard);
-const boardWithAdjacentMines = setAdjacentMinesTotal(boardWithMines);
+const board = generateBoard(10);
+const hasMinesBoard = setHasMines(board);
+const hasAdjacentMinesBoard = setAdjacentMinesTotal(hasMinesBoard);
 
-renderBoard(boardWithAdjacentMines);
+renderBoard(hasAdjacentMinesBoard);
