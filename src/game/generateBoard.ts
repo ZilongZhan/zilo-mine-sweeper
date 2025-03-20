@@ -7,6 +7,10 @@ export const generateBoard = (dimensions: number): Board => {
     throw new Error("Dimensions cannot be smaller than 5");
   }
 
+  if (!Number.isInteger(dimensions)) {
+    throw new Error("Function can only accept integers");
+  }
+
   const board: Board = [];
 
   for (let rowNumber = 0; rowNumber < dimensions; rowNumber++) {
