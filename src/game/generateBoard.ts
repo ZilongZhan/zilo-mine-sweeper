@@ -16,6 +16,10 @@ export const generateBoard = (dimensions: number): Board => {
       const cell: Cell = {
         hasMine: false,
         adjacentMinesTotal: 0,
+        coordinates: {
+          row: rowNumber,
+          column: columnNumber,
+        },
       };
 
       board[rowNumber][columnNumber] = cell;
