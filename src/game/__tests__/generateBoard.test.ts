@@ -5,7 +5,7 @@ describe("Given the generateBoard function", () => {
     const dimensions = 5;
     const board = generateBoard(dimensions);
 
-    test("Then it should return an board of rows with length 5.", () => {
+    test("Then it should return an board with 5 rows.", () => {
       const expectedRowLength = 5;
 
       const rowLength = board.length;
@@ -13,7 +13,7 @@ describe("Given the generateBoard function", () => {
       expect(rowLength).toBe(expectedRowLength);
     });
 
-    test("Then it should return an board of columns with length 5.", () => {
+    test("Then it should return an board with 5 columns.", () => {
       const expectedColumnLength = 5;
 
       const areAllColumnsCorrectLength = board.every(
@@ -25,7 +25,7 @@ describe("Given the generateBoard function", () => {
 
     test("Then it should return a board of cells with no mines.", () => {
       const haveNoMines = board.every((row) =>
-        row.every((cell) => cell.hasMine === false)
+        row.every((cell) => !cell.hasMine)
       );
 
       expect(haveNoMines).toBe(true);
@@ -33,7 +33,7 @@ describe("Given the generateBoard function", () => {
 
     test("Then it should return a board of cells with no adjacent mines", () => {
       const haveNoAdjacentMines = board.every((row) =>
-        row.every((cell) => cell.adjacentMinesTotal === 0)
+        row.every((cell) => !cell.adjacentMinesTotal)
       );
 
       expect(haveNoAdjacentMines).toBe(true);
