@@ -12,7 +12,7 @@ export const renderModalElement = (gameResult: "win" | "lose"): void => {
   if (gameResult === "lose") {
     modalElement.classList.add("modal--lose");
     modalElement.innerHTML = `
-    <span class="modal-message">You lost!</span>
+    <span class="modal-message">Game over!</span>
     <button class="modal-button" onClick="window.location.reload()">New game</button>
     `;
   }
