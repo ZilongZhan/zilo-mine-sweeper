@@ -1,6 +1,7 @@
 import { Cell } from "../data/types";
-import { createAdjacentMinesTotalElement } from "./createAdjacentMinesTotalElement.js";
+import { createAdjacentMinesElement } from "./createAdjacentMinesElement.js";
 import { createMineElement } from "./createMineElement.js";
+import { gameOver } from "./gameOver.js";
 
 export const createCellElement = (cell: Cell): HTMLElement => {
   const cellWrapperElement = document.createElement("li");
@@ -13,8 +14,14 @@ export const createCellElement = (cell: Cell): HTMLElement => {
   const cellElement = cellWrapperElement.querySelector(".cell")!;
 
   cellElement.addEventListener("click", () => {
-    const cellElementChild = cellElement.querySelector(".cell-content")!;
-    cellElementChild.classList.remove("hidden");
+    if (cell.hasMine) {
+      gameOver();
+
+      return;
+    }
+
+    const adjacentMinesElement = cellElement.querySelector(".adjacent-mines")!;
+    adjacentMinesElement.classList.remove("hidden");
   });
 
   if (cell.hasMine) {
@@ -23,9 +30,7 @@ export const createCellElement = (cell: Cell): HTMLElement => {
     return cellWrapperElement;
   }
 
-  cellElement.innerHTML = createAdjacentMinesTotalElement(
-    cell.adjacentMinesTotal
-  );
+  cellElement.innerHTML = createAdjacentMinesElement(cell.adjacentMinesTotal);
 
   return cellWrapperElement;
 };

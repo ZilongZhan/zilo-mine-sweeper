@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .main-header {
   display: flex;
   justify-content: center;
@@ -53,6 +57,8 @@ body {
   padding: 0;
   display: flex;
   font-family: "Press Start 2P", system-ui;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     opacity: 0.5;
@@ -64,6 +70,6 @@ body {
   }
 }
 
-.hidden {
-  display: none !important;
+.mine {
+  width: 100%;
 }
