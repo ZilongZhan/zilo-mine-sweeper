@@ -1,4 +1,4 @@
-import { generateBoard } from "../generateBoard";
+import { generateBoard } from "../../board/index.js";
 import { setAdjacentMinesTotal } from "../setAdjacentMinesTotal";
 
 describe("Given the getAdjacentMinesTotal function", () => {

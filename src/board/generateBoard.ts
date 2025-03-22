@@ -1,4 +1,5 @@
-import { Board, Cell } from "../data/types.js";
+import { createCell } from "../cell/createCell.js";
+import { Board } from "../data/types.js";
 
 export const generateBoard = (dimensions: number): Board => {
   const areInvalidDimensions = dimensions < 5;
@@ -17,14 +18,7 @@ export const generateBoard = (dimensions: number): Board => {
     board.push([]);
 
     for (let columnNumber = 0; columnNumber < dimensions; columnNumber++) {
-      const cell: Cell = {
-        hasMine: false,
-        adjacentMinesTotal: 0,
-        coordinates: {
-          row: rowNumber,
-          column: columnNumber,
-        },
-      };
+      const cell = createCell(rowNumber, columnNumber);
 
       board[rowNumber][columnNumber] = cell;
     }

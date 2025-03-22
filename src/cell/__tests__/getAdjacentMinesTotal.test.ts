@@ -1,5 +1,5 @@
 import { Cell } from "../../data/types";
-import { generateBoard } from "../generateBoard";
+import { generateBoard } from "../../board/index.js";
 import { getAdjacentMinesTotal } from "../getAdjacentMinesTotal";
 
 describe("Given the getAdjacentMinesTotal function", () => {
