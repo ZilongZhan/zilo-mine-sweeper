@@ -1,5 +1,5 @@
 export const createMineElement = (): string => {
   return `
-        <img class="cell-content hidden" src="/images/dabomb.svg" alt="" />
+        <img class="mine hidden" src="/images/dabomb.svg" alt="" />
         `;
 };
