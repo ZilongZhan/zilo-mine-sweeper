@@ -1,1 +1,1 @@
-export { renderBoard } from "./renderBoard.js";
+export { createBoardElement } from "./createBoardElement";
