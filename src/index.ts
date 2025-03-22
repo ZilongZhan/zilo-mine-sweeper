@@ -1,10 +1,6 @@
-import {
-  generateBoard,
-  setHasMines,
-  setAdjacentMinesTotal,
-} from "./game/index.js";
-import { createBoardElement } from "./ui/createBoardElement.js";
-import { renderBoardElement } from "./ui/renderBoardElement.js";
+import { generateBoard } from "./board/index.js";
+import { setAdjacentMinesTotal, setHasMines } from "./cell/index.js";
+import { createBoardElement, renderBoardElement } from "./ui/index.js";
 
 const board = generateBoard(10);
 const hasMinesBoard = setHasMines(board);
