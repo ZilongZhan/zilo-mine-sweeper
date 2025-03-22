@@ -1,2 +1,2 @@
-export { setAdjacentMinesTotal } from "./setAdjacentMinesTotal";
-export { setHasMines } from "./setHasMines";
+export { setAdjacentMinesTotal } from "./setAdjacentMinesTotal.js";
+export { setHasMines } from "./setHasMines.js";
