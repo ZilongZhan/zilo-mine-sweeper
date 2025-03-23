@@ -2,6 +2,7 @@ import { Cell } from "../data/types";
 import { createAdjacentMinesElement } from "./createAdjacentMinesElement.js";
 import { createMineElement } from "./createMineElement.js";
 import { renderAllMineElements } from "./renderAllMineElements.js";
+import { renderModalElement } from "./renderModalElement.js";
 
 export const createCellElement = (cell: Cell): HTMLElement => {
   const cellWrapperElement = document.createElement("li");
@@ -30,6 +31,19 @@ export const createCellElement = (cell: Cell): HTMLElement => {
     const adjacentMinesElement = cellElement.querySelector(".adjacent-mines")!;
     adjacentMinesElement.ariaHidden = "true";
     adjacentMinesElement.classList.remove("hidden");
+
+    const adjacentMinesElements = document.querySelectorAll(".adjacent-mines");
+
+    const areAllCellsOpen = Array.from(adjacentMinesElements).every(
+      (adjacentMinesElement) =>
+        adjacentMinesElement.className === "adjacent-mines"
+    );
+
+    console.log(areAllCellsOpen);
+
+    if (areAllCellsOpen) {
+      renderModalElement("win");
+    }
   });
 
   if (cell.hasMine) {

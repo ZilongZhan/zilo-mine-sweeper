@@ -17,6 +17,14 @@ export const renderModalElement = (gameResult: "win" | "lose"): void => {
     `;
   }
 
+  if (gameResult === "win") {
+    modalElement.classList.add("modal--win");
+    modalElement.innerHTML = `
+    <span class="modal-message">You win!</span>
+    <button class="modal-button" onClick="window.location.reload()">New game</button>
+    `;
+  }
+
   mainContentElement.appendChild(modalElement);
   boardElement.classList.add("disabled");
 };
