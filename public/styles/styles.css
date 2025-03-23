@@ -73,7 +73,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background-color: rgb(94, 92, 202);
+  background-color: rgb(102, 99, 255);
   padding: 10px;
   border-bottom: 3px solid rgb(0, 0, 0);
 }
@@ -171,7 +171,7 @@ button {
 }
 
 .main-footer {
-  background-color: rgb(94, 92, 202);
+  background-color: rgb(102, 99, 255);
   text-align: center;
   padding: 15px;
   font-size: 1rem;
