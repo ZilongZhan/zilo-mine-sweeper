@@ -9,7 +9,7 @@ export const createCellElement = (cell: Cell): HTMLElement => {
   const columnNumber = cell.coordinates.column + 1;
 
   cellWrapperElement.innerHTML = `
-  <button class="cell" aria-label="Row ${rowNumber} Column ${columnNumber}" type="button">
+  <button class="cell color${cell.adjacentMinesTotal}" aria-label="Row ${rowNumber} Column ${columnNumber}" type="button">
   </button>
   `;
 

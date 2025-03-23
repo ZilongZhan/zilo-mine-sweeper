@@ -25,6 +25,38 @@ button {
   pointer-events: none !important;
 }
 
+.color1 {
+  color: rgb(50, 50, 255) !important;
+}
+
+.color2 {
+  color: rgb(0, 128, 0) !important;
+}
+
+.color3 {
+  color: rgb(255, 45, 21) !important;
+}
+
+.color4 {
+  color: rgb(24, 24, 169) !important;
+}
+
+.color5 {
+  color: rgb(214, 0, 0) !important;
+}
+
+.color6 {
+  color: rgb(66, 166, 156) !important;
+}
+
+.color7 {
+  color: rgb(43, 43, 43) !important;
+}
+
+.color8 {
+  color: rgb(155, 155, 155) !important;
+}
+
 .main-header {
   display: flex;
   justify-content: center;
