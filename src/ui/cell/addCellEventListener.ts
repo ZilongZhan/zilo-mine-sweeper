@@ -1,6 +1,6 @@
-import { renderAllMineElements } from "./renderAllMineElements";
-import { renderAdjacentMinesElement } from "./renderAdjacentMinesElement";
-import { renderModalElement } from "../renderModalElement";
+import { renderAllMineElements } from "./renderAllMineElements.js";
+import { renderAdjacentMinesElement } from "./renderAdjacentMinesElement.js";
+import { renderModalElement } from "../renderModalElement.js";
 import { Cell } from "../../data/types";
 
 export const addCellEventListener = (
