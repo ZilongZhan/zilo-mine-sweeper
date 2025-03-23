@@ -1,7 +1,9 @@
 import { renderModalElement } from "../renderModalElement.js";
 
 export const renderAllMineElements = (): void => {
-  const cellElements = document.querySelectorAll(".cell");
+  const cellElements = document.querySelectorAll(
+    ".cell"
+  ) as NodeListOf<HTMLButtonElement>;
   const mineElements = document.querySelectorAll(".mine");
 
   if (cellElements.length === 0 || !mineElements) {
@@ -9,9 +11,7 @@ export const renderAllMineElements = (): void => {
   }
 
   cellElements.forEach((cellElement) => {
-    const thisCellElement = cellElement as HTMLButtonElement;
-
-    thisCellElement.disabled = true;
+    cellElement.disabled = true;
   });
 
   mineElements.forEach((mineElement) => {
