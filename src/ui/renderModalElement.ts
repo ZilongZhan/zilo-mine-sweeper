@@ -18,6 +18,7 @@ export const renderModalElement = (gameResult: "win" | "lose"): void => {
 
     mainContentElement.appendChild(modalElement);
     boardElement.classList.add("disabled");
+    return;
   }
 
   modalElement.classList.add("modal--win");
