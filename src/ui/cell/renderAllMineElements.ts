@@ -1,4 +1,4 @@
-import { renderModalElement } from "./renderModalElement.js";
+import { renderModalElement } from "../renderModalElement.js";
 
 export const renderAllMineElements = (): void => {
   const cellElements = document.querySelectorAll(".cell");
@@ -9,9 +9,9 @@ export const renderAllMineElements = (): void => {
   }
 
   cellElements.forEach((cellElement) => {
-    const thisCellElement = cellElement as HTMLElement;
+    const thisCellElement = cellElement as HTMLButtonElement;
 
-    thisCellElement.tabIndex = -1;
+    thisCellElement.disabled = true;
   });
 
   mineElements.forEach((mineElement) => {

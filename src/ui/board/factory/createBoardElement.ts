@@ -1,5 +1,5 @@
-import { Board } from "../data/types";
-import { createCellElement } from "./createCellElement.js";
+import { Board } from "../../../data/types";
+import { createCellElement } from "../../cell/factory/createCellElement.js";
 
 export const createBoardElement = (board: Board): HTMLElement => {
   const boardElement = document.createElement("div");
