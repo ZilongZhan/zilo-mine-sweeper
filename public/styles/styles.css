@@ -21,8 +21,8 @@ button {
 }
 
 .disabled {
-  opacity: 50%;
-  pointer-events: none;
+  opacity: 50% !important;
+  pointer-events: none !important;
 }
 
 .main-header {
