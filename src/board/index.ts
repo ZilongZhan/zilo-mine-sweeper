@@ -1,1 +1,1 @@
-export { generateBoard } from "./generateBoard.js";
+export { createBoard } from "./factory/createBoard.js";
