@@ -1,5 +1,5 @@
-import { Board } from "../data/types";
-import { createBoardElement } from "./createBoardElement.js";
+import { Board } from "../../data/types";
+import { createBoardElement } from "./factory/createBoardElement.js";
 
 export const renderBoardElement = (board: Board): void => {
   const mainContentElement = document.querySelector(".main-content");

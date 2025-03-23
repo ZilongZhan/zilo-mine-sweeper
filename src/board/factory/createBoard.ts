@@ -1,7 +1,7 @@
-import { createCell } from "../cell/createCell.js";
-import { Board } from "../data/types.js";
+import { createCell } from "../../cell/factory/createCell.js";
+import { Board } from "../../data/types.js";
 
-export const generateBoard = (dimensions: number): Board => {
+export const createBoard = (dimensions: number): Board => {
   const areInvalidDimensions = dimensions < 5;
 
   if (areInvalidDimensions) {

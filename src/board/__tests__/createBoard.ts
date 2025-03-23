@@ -1,9 +1,9 @@
-import { generateBoard } from "../generateBoard";
+import { createBoard } from "../factory/createBoard";
 
 describe("Given the generateBoard function", () => {
   describe("When it receives 5", () => {
     const dimensions = 5;
-    const board = generateBoard(dimensions);
+    const board = createBoard(dimensions);
 
     test("Then it should return an board with 5 rows.", () => {
       const expectedRowLength = 5;
@@ -46,7 +46,7 @@ describe("Given the generateBoard function", () => {
 
       const expectedErrorMessage = "Dimensions cannot be smaller than 5";
 
-      expect(() => generateBoard(dimensions)).toThrow(expectedErrorMessage);
+      expect(() => createBoard(dimensions)).toThrow(expectedErrorMessage);
     });
   });
 });
