@@ -39,8 +39,6 @@ export const createCellElement = (cell: Cell): HTMLElement => {
         adjacentMinesElement.className === "adjacent-mines"
     );
 
-    console.log(areAllCellsOpen);
-
     if (areAllCellsOpen) {
       renderModalElement("win");
     }
