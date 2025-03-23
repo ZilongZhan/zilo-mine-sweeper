@@ -1,26 +1,34 @@
 import { Cell } from "../data/types";
 import { createAdjacentMinesElement } from "./createAdjacentMinesElement.js";
 import { createMineElement } from "./createMineElement.js";
-import { gameOver } from "./gameOver.js";
+import { renderAllMineElements } from "./renderAllMineElements.js";
 
 export const createCellElement = (cell: Cell): HTMLElement => {
   const cellWrapperElement = document.createElement("li");
 
+  const rowNumber = cell.coordinates.row + 1;
+  const columnNumber = cell.coordinates.column + 1;
+
   cellWrapperElement.innerHTML = `
-    <button class="cell" aria-label="Sweep cell" type="button">
+    <button class="cell" aria-label="Row ${rowNumber} Column ${columnNumber}" type="button">
     </button>
   `;
 
-  const cellElement = cellWrapperElement.querySelector(".cell")!;
+  const cellElement = cellWrapperElement.querySelector(
+    ".cell"
+  ) as HTMLButtonElement;
 
   cellElement.addEventListener("click", () => {
     if (cell.hasMine) {
-      gameOver();
+      renderAllMineElements();
 
       return;
     }
 
+    cellElement.ariaLabel = `${cell.adjacentMinesTotal} adjacent mines`;
+
     const adjacentMinesElement = cellElement.querySelector(".adjacent-mines")!;
+    adjacentMinesElement.ariaHidden = "true";
     adjacentMinesElement.classList.remove("hidden");
   });
 
