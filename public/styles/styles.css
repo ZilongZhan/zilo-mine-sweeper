@@ -121,3 +121,7 @@ button {
 .modal--lose {
   background-color: rgb(255, 60, 60);
 }
+
+.modal--win {
+  background-color: rgb(94, 92, 202);
+}
