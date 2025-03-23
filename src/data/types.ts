@@ -6,6 +6,7 @@ export type Coordinates = {
 export type Cell = {
   hasMine: boolean;
   adjacentMinesTotal: number;
+  isOpen: boolean;
   coordinates: Coordinates;
 };
 

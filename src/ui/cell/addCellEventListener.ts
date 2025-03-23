@@ -8,6 +8,8 @@ export const addCellEventListener = (
   cellElement: Element
 ): void => {
   cellElement.addEventListener("click", () => {
+    cell.isOpen = true;
+
     if (cell.hasMine) {
       renderAllMineElements();
 

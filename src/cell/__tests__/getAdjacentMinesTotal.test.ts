@@ -6,6 +6,7 @@ describe("Given the getAdjacentMinesTotal function", () => {
   const cell: Cell = {
     hasMine: false,
     adjacentMinesTotal: 0,
+    isOpen: false,
     coordinates: {
       row: 2,
       column: 2,
